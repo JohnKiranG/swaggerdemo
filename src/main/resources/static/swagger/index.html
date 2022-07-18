@@ -1,0 +1,100 @@
+<!-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <link rel="shortcut icon" href="<c:url value="/resources/img/logoIcon.png" />" /> -->
+        <title>Demo API</title>        
+        <style>
+        	body {
+        		overflow: hidden;
+        	}
+        	
+            .cc-logo {
+                width: 300px;
+                padding: 20px;
+                display: block;
+            }
+
+            .topbar {
+                background-color: #327fb4;
+                height: 20px;
+            }
+
+            .swag-ui {
+                overflow:hidden;
+                height:87vh;
+                width:100%;
+                position:absolute;
+                left:0px;
+                right:0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+          
+        </div>
+        <div class="topbar"></div>
+        <object id="frame" 
+            type="text/html" 
+            data="/test/swagger-ui/index.html"
+            class="swag-ui">
+        </object>
+    </body>
+
+</html>
+
+<!--Approach 2 Can be injected through JS, but maintenance is to be taken care -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo API</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+
+    <style>
+        .cc-logo {
+            width: 300px;
+            padding: 20px;
+            display: block;
+        }
+
+        .topbar {
+            background-color: #327fb4;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        
+    </div>
+    <div class="topbar"></div>
+    <div id="swagger-ui"></div>
+    <script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-standalone-preset.js"></script>
+    <script>
+        window.onload = () => {
+            window.ui = SwaggerUIBundle({
+                url: '/api-docs/',
+                dom_id: '#swagger-ui',
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                layout: "BaseLayout",
+                "configUrl" : "/api-docs/swagger-config",
+                "operationsSorter" : "alpha",
+                "validatorUrl" : ""
+            });
+        };
+    </script>
+</body> -->
